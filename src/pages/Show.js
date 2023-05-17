@@ -19,6 +19,8 @@ const Show = (props) => {
         }
     }, [hike])
 
+ 
+
     const handleChange = (e) => {
         setEditForm({
             ...editForm,
@@ -30,6 +32,7 @@ const Show = (props) => {
         e.preventDefault()
         props.updateMountain(editForm, hike._id)
     }
+
 
     const handleEdit = () => {
         setIsEditing(prevState => !prevState)
@@ -43,12 +46,14 @@ const Show = (props) => {
     const loaded = () => {
         return (
             <>
-              <h1>{hike.name}</h1>
-              <h1>{hike.Location}</h1>
+              <h1>mountain: {hike.name}</h1>
+              <h1>location: {hike.location}</h1>
               <img className="mountain-image" src={hike.image} alt={hike.name} />
-              <h1>{hike.Difficulty}</h1>
-              <button onClick={handleEdit}>{ isEditing ? " cancel edit" : "edit"}</button>
-              <button onClick={handleDelete}> DELETE</button>
+              <h1>difficulty: {hike.difficulty}</h1>
+              <h1>elevation: {hike.elevation}</h1>
+              <h1>visited: <input type="checkbox"/></h1>
+              <button onClick={handleEdit}>{ isEditing ? " cancel edit" : "update"}</button>
+              <button onClick={handleDelete}> delete</button>
             </>
         )
     }
@@ -63,12 +68,13 @@ const Show = (props) => {
 
             { isEditing && 
              <form onSubmit={handleUpdate}>
-             <input type="text" value={editForm.name} name="name" placeholder="name" onChange={handleChange} />
-             <input type="text" value={editForm.image} name="image" placeholder="image URL" onChange={handleChange} />
-             <input type="text" value={editForm.Location} name="Location" placeholder="Location" onChange={handleChange} />
-             <input type="text" value={editForm.Difficulty} name="Difficulty" placeholder="Difficulty" onChange={handleChange} />
-             <input type="submit" value=" update hike" />
-         </form>
+                <input type="text" value={editForm.name} name="name" placeholder="name" onChange={handleChange} />
+                <input type="text" value={editForm.image} name="image" placeholder="image URL" onChange={handleChange} />
+                <input type="text" value={editForm.location} name="location" placeholder="location" onChange={handleChange} />
+                <input type="text" value={editForm.difficulty} name="difficulty" placeholder="difficulty" onChange={handleChange} />
+                <input type="number" value={editForm.elevation} name="elevation" placeholder="elevation" onChange={handleChange} />
+                <input type="submit" value=" update hike" />
+             </form>
             }
         </div>
     )

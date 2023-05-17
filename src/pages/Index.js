@@ -5,8 +5,11 @@ const Index = (props) => {
     const [newForm, setNewForm] = useState({
       name: "",
       image: "",
-      Location: "",
-      Difficulty: "",
+      location: "",
+      difficulty: "",
+      elevation: "",
+      visited: false,
+
     })
 
     const handleChange = (event) => {
@@ -19,8 +22,11 @@ const Index = (props) => {
       setNewForm({
          name: "",
          image: "",
-         Location: "",
-         Difficulty: "",
+         location: "",
+         difficulty: "",
+         elevation: "",
+         visited: false,
+         
         })
     }
 
@@ -30,8 +36,8 @@ const Index = (props) => {
             <Link to={`/mountain/${hike._id}`}><h1>{hike.name}</h1>
             </Link>
             <img src={hike.image} alt={hike.name}/>
-            <h3>{hike.Location}</h3>
-            <h3>{hike.Difficulty}</h3>
+            {/* <h3>{hike.Location}</h3>
+            <h3>{hike.Difficulty}</h3> */}
         </div>
         ))
     }
@@ -45,9 +51,10 @@ const Index = (props) => {
             <form onSubmit={handleSubmit}>
                 <input type="text" value={newForm.name} name="name" placeholder="name" onChange={handleChange} />
                 <input type="text" value={newForm.image} name="image" placeholder="image URL" onChange={handleChange} />
-                <input type="text" value={newForm.Location} name="Location" placeholder="Location" onChange={handleChange} />
-                <input type="text" value={newForm.Difficulty} name="Difficulty" placeholder="Difficulty" onChange={handleChange} />
-                <input type="submit" value=" create hike" />
+                <input type="text" value={newForm.location} name="location" placeholder="location" onChange={handleChange} />
+                <input type="text" value={newForm.difficulty} name="difficulty" placeholder="difficulty" onChange={handleChange} />
+                <input type="number" value={newForm.elevation} name="elevation" placeholder="elevation" onChange={handleChange} />
+               <input type="submit" value=" create hike" />
             </form>
             {props.mountain ? loaded() : loading()}
         </section>

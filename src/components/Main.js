@@ -27,7 +27,7 @@ function Main(props) {
      getMountain()
     }
 
-  const updataMountain = async(hike,id) => {
+  const updateMountain = async(hike,id) => {
     await fetch(URL + id,{
       method: "PUT",
       headers: {
@@ -52,7 +52,7 @@ function Main(props) {
     return(
         <Routes>
             <Route exact path="/" element= {<Index mountain={mountain} createMountain={createMountain}/>} />
-            <Route exact path="/mountain/:id" element= {<Show mountain={mountain} updataMountain={updataMountain} deleteMountain={deleteMountain}/>}/>
+            <Route exact path="/mountain/:id" element= {<Show mountain={mountain} updateMountain={updateMountain} deleteMountain={deleteMountain}/>}/>
         </Routes>
     )   
 }
