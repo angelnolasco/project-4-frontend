@@ -45,7 +45,9 @@ function Main(props) {
      getMountain()
    }
 
-    useEffect(() => getMountain(), [])
+    useEffect(() =>{
+        getMountain()
+    },[])
 
     return(
         <Routes>
