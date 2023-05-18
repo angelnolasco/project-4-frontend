@@ -1,0 +1,100 @@
+.nav {
+    background-color: rgb(60, 179, 60);
+    padding: 10px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
+
+  .nav a:hover {
+    color: orange,
+  }
+  
+  .nav div {
+    font-size: 30px;
+    font-weight: bold;
+  }
+//index
+.index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hike {
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hike:hover {
+    transform: scale(1.05);
+  }
+  
+  .hike h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .hike img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  // show
+  .hike {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .hike h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .mountain-image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .hike button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .hike form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .hike form input {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
+  .hike form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+   

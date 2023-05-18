@@ -36,8 +36,6 @@ const Index = (props) => {
             <Link to={`/mountain/${hike._id}`}><h1>{hike.name}</h1>
             </Link>
             <img src={hike.image} alt={hike.name}/>
-            {/* <h3>{hike.Location}</h3>
-            <h3>{hike.Difficulty}</h3> */}
         </div>
         ))
     }
@@ -47,7 +45,7 @@ const Index = (props) => {
     }
 
     return (
-        <section>
+        <section className="index">
             <form onSubmit={handleSubmit}>
                 <input type="text" value={newForm.name} name="name" placeholder="name" onChange={handleChange} />
                 <input type="text" value={newForm.image} name="image" placeholder="image URL" onChange={handleChange} />

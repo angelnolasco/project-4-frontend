@@ -46,14 +46,16 @@ const Show = (props) => {
     const loaded = () => {
         return (
             <>
-              <h1>mountain: {hike.name}</h1>
-              <h1>location: {hike.location}</h1>
+            <div className="hike">
+              <h1>Mountain: {hike.name}</h1>
+              <h1>Location: {hike.location}</h1>
               <img className="mountain-image" src={hike.image} alt={hike.name} />
-              <h1>difficulty: {hike.difficulty}</h1>
-              <h1>elevation: {hike.elevation}</h1>
-              <h1>visited: <input type="checkbox"/></h1>
-              <button onClick={handleEdit}>{ isEditing ? " cancel edit" : "update"}</button>
+              <h1>Difficulty: {hike.difficulty}</h1>
+              <h1>Elevation: {hike.elevation}</h1>
+              <h1>Visited: <input type="checkbox"/></h1>
+              <button onClick={handleEdit}>{ isEditing ? " cancel update" : "update"}</button>
               <button onClick={handleDelete}> delete</button>
+              </div>
             </>
         )
     }
