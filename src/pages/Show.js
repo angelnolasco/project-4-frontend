@@ -55,7 +55,7 @@ const Show = (props) => {
               <h1>Visited: <input type="checkbox"/></h1>
               <div className="button-container">
               <button onClick={handleEdit}>{ isEditing ? " cancel update" : "update"}</button>
-              <button onClick={handleDelete}> check off </button>
+              <button onClick={handleDelete}> Detele </button>
               </div>
               </div>
             </>
