@@ -46,15 +46,17 @@ const Show = (props) => {
     const loaded = () => {
         return (
             <>
-            <div className="hike">
+            <div className="hike-2">
               <h1>Mountain: {hike.name}</h1>
               <h1>Location: {hike.location}</h1>
               <img className="mountain-image" src={hike.image} alt={hike.name} />
               <h1>Difficulty: {hike.difficulty}</h1>
               <h1>Elevation: {hike.elevation}</h1>
               <h1>Visited: <input type="checkbox"/></h1>
+              <div className="button-container">
               <button onClick={handleEdit}>{ isEditing ? " cancel update" : "update"}</button>
-              <button onClick={handleDelete}> delete</button>
+              <button onClick={handleDelete}> check off </button>
+              </div>
               </div>
             </>
         )
@@ -65,7 +67,7 @@ const Show = (props) => {
     }
     
     return (
-        <div className="hike">
+        <div className="hike-show">
             {hike ? loaded() : loading()}
 
             { isEditing && 
