@@ -11,6 +11,6 @@ Technologies Used: MongoDB, Express.js, React, Node.js & css
 
 Getting Started: trello - https://trello.com/b/mVzRnQbV/project-4  Netlify - https://timely-conkies-6ffe8a.netlify.app/
 
-Unsolved Problems: not a big fun of the css 
+Unsolved Problems: not a big fun of the css / I wasn't able to place all the input text boxes inside a hamburger menu. 
 
 Future Enhancements: user can sign in/out and pin location on hikes
